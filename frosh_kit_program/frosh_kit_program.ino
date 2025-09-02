@@ -51,7 +51,7 @@ void setup() {
     pinMode(OUTPUT_PORT, OUTPUT);
     pinMode(BATTERY_PORT, INPUT);
     digitalWrite(OUTPUT_PORT, LOW);
-    delay(100);
+    delay(500);
 
     // Determine if the device is the main one (based on BATTERY_PORT reading)
     if (digitalRead(BATTERY_PORT)) {
@@ -66,6 +66,7 @@ void setup() {
     } else {
         has_prev = false;
     }
+    delay(500);
 }
 
 void loop() {
