@@ -27,7 +27,7 @@ The instruction to program the F!rosh kit was originally found on [this tutorial
 1. Prepare an Arduino UNO and 4 resistors (anywhere from 220Ω to 1kΩ should work).
 2. Connect pin 10, 11, 12, and 13 of the Arduino UNO to the 4 resistors. Respectively, the other end of the resistors connected to pins 10, 11, 12, and 13 represents RESET, MOSI, MISO, and SCK. (Image from the original tutorial)
 ![Arduino Programming Connections](imgs/programming_figures/programming_arduino_connection.png)
-3. Connect RESET to the `R` pin, MOSI and MISO both to the `D` pin, and SCK to the `C` pin. The pins are visible from the front of the board:
+3. Connect RESET to the `R` pin, MOSI and MISO both to the `D` pin, and SCK to the `C` pin. Also connect 5V to VIN or `+`, and ground to GND. The pins are visible from the front of the board:
 ![Board 1 Front View](imgs/board_previews/board_1_top.png)
 
 ## Programming Environment Setup
