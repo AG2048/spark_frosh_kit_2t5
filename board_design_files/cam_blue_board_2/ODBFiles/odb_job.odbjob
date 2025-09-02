@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2025-06-14T07:58:42Z",
+        "GenerationSoftware": {
+            "Application": "Fusion Electronics",
+            "Vendor": "Autodesk",
+            "Version": "9.7.0"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.67,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "SPARK 2025 PCB BRD_2 v38"
+        },
+        "Owner": "Ran Gong <andygong2004@gmail.com>",
+        "Size": {
+            "X": 25,
+            "Y": 25
+        }
+    }
+}
