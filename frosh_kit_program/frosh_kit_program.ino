@@ -108,6 +108,7 @@ void loop() {
             delay(500);
 
             // Speeding up
+            delay(100);
             x = X_INIT_VALUE;
             while (x > X_DEC_VALUE) {
                 digitalWrite(OUTPUT_PORT, HIGH);
@@ -156,6 +157,7 @@ void loop() {
 
             // Write LOW to begin the final cycle
             digitalWrite(OUTPUT_PORT, LOW);
+            delay(100);
 
             // Cycle: light after falling edge, duration speeds up
             x = X_INIT_VALUE;
