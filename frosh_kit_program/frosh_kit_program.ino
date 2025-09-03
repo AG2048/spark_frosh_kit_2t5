@@ -91,7 +91,7 @@ void loop() {
             wait_falling_edge();
             // Second 250ms Loop
             digitalWrite(OUTPUT_PORT, HIGH);
-            delay(800);
+            delay(1000);
 
             // All turn off for a brief moment
             digitalWrite(OUTPUT_PORT, LOW);
