@@ -15,20 +15,21 @@ The real complex design of the boards comes into play when 4 soldered boards com
 The objective of this design is to make a cool-looking PCB, while also using its puzzle-like design to encourage F!rosh this year to meet new friends (reference: some old coca-cola commercial that did this...)
 
 # File Structure
-- `board_design_files/`: Contains the PCB design files for the F!rosh 2T5 kit.
+- `board_design_files/`: Contains the PCB design files for the F!rosh 2T5 kit. The BOM can also be found somewhere in this directory.
 - `frosh_kit_program/`: Contains the Arduino program files for the F!rosh 2T5 kit.
 - `imgs/`: Contains images related to the F!rosh 2T5 kit.
 - `programming_resources/`: Contains resources for programming the ATTiny10 microcontroller. These files may be produced by other people. 
 
 # Programming
-The instruction to program the F!rosh kit was originally found on [this tutorial](https://make.kosakalab.com/make/electronic-work/arduio_tpi_en/). Unfortunately, as of September 1, 2025, this tutorial site is no longer available. Therefore, I have provided the necessary instructions below.
+The ATTiny10 microcontroller used in the F!rosh Kit can be programmed using the Tiny Programming Interface (TPI). The instruction to program the ATTiny10 using TPI was originally found on [this tutorial](https://make.kosakalab.com/make/electronic-work/arduio_tpi_en/). Unfortunately, as of September 1, 2025, this tutorial site is no longer available. Therefore, I have provided the necessary instructions below.
 
 ## Wire Connections
 1. Prepare an Arduino UNO and 4 resistors (anywhere from 220Ω to 1kΩ should work).
-2. Connect pin 10, 11, 12, and 13 of the Arduino UNO to the 4 resistors. Respectively, the other end of the resistors connected to pins 10, 11, 12, and 13 represents RESET, MOSI, MISO, and SCK. (Image from the original tutorial)
+2. Connect pin 10, 11, 12, and 13 of the Arduino UNO to the 4 resistors. Respectively, the other end of the resistors connected to pins 10, 11 and 12, and 13 represents `RESET`, `TPIDATA`, and `TPICLK`. (Image from the original tutorial)
 ![Arduino Programming Connections](imgs/programming_figures/programming_arduino_connection.png)
-3. Connect RESET to the `R` pin, MOSI and MISO both to the `D` pin, and SCK to the `C` pin. Also connect 5V to `VIN` or `+` or `VCC`, and ground to `GND` or `-`. The pins are visible from the front of the board:
+3. Connect `RESET` to the `R` pin, `TPIDATA` to the `D` pin, and `TPICLK` to the `C` pin. Also connect 5V to `VIN` or `+` or `VCC`, and ground to `GND` or `-`. The pins are visible from the front of the board:
 ![Board 1 Front View](imgs/board_previews/board_1_top.png)
+- Note, if it's hard to connect to the `R`, `C`, `D` pins, you can connect `TPIDATA` to the `DIN` pin, and connect the `TPICLK` to the `CLK` pin. 
 
 ## Programming Environment Setup
 1. Download the [modified Arduino programmer](programming_resources/ATtiny4_5_9_10_20_40Programmer_2/) obtained from the original tutorial.
